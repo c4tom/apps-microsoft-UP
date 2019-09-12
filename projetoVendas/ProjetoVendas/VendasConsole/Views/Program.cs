@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VendasConsole.DAL;
+using VendasConsole.Models;
 
-namespace VendasConsole
+namespace VendasConsole.Views
 {
     class Program
     {
@@ -27,18 +29,10 @@ namespace VendasConsole
                 switch (opcao)
                 {
                     case 1:
-                        Console.WriteLine("  -- CADASTRAR CLIENTE --  \n");
-                        Cliente c = new Cliente();
-                        Console.WriteLine("Digite o nome do cliente:");
-                        c.Nome = Console.ReadLine();
-                        Console.WriteLine("Digite o CPF do cliente:");
-                        c.Cpf = Console.ReadLine();
-                        Console.WriteLine(c);
-                        Console.WriteLine("Cliente cadastrado com sucesso!");
+                        CadastrarCliente.Renderizar();
                         break;
                     case 2:
-                        Console.WriteLine("  -- LISTAR CLIENTE --  \n");
-
+                        ListarClientes.Renderizar();
                         break;
                     case 0:
                         Console.WriteLine("Saindo...");
