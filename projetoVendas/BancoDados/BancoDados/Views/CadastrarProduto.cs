@@ -13,6 +13,7 @@ namespace BancoDados.Views
         public static void Renderizar()
         {
             Produto p = new Produto();
+            Categoria c = new Categoria();
             Console.WriteLine("  -- CADASTRAR PRODUTO --  \n");
             Console.WriteLine("Digite o nome do produto:");
             p.Nome = Console.ReadLine();
@@ -20,9 +21,19 @@ namespace BancoDados.Views
             p.Quantidade = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Digite o preço do produto:");
             p.Preco = Convert.ToDouble(Console.ReadLine());
-
-            ProdutoDAO.CadastrarProduto(p);
-            Console.WriteLine("Produto cadastrado com sucesso!");
+            Console.WriteLine("Digite o nome da categoria:");
+            c.Nome = Console.ReadLine();
+            c = CategoriaDAO.BuscarCategoriaPorNome(c);
+            if (c != null)
+            {
+                p.Categoria = c;
+                ProdutoDAO.CadastrarProduto(p);
+                Console.WriteLine("Produto cadastrado com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("Essa categoria não existe!");
+            }
         }
     }
 }

@@ -22,9 +22,13 @@ namespace BancoDados.Models
         public int Quantidade { get; set; }
         public double Preco { get; set; }
         public DateTime CriadoEm { get; set; }
+        public Categoria Categoria { get; set; }
         public override string ToString()
         {
-            return "Nome: " + Nome + " | Quantidade: " + Quantidade + " | Preço: " + Preco.ToString("C2");
+            return "Nome: " + Nome + 
+                " | Quantidade: " + Quantidade + 
+                " | Preço: " + Preco.ToString("C2") + 
+                " | Categoria: " + Categoria.Nome;
         }
 
     }

@@ -32,6 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -43,9 +49,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\CategoriaDAO.cs" />
     <Compile Include="DAL\ProdutoDAO.cs" />
+    <Compile Include="DAL\SingletonContext.cs" />
+    <Compile Include="Migrations\201909032231181_CriarBanco.cs" />
+    <Compile Include="Migrations\201909032231181_CriarBanco.Designer.cs">
+      <DependentUpon>201909032231181_CriarBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909040024469_AddTableCategorias.cs" />
+    <Compile Include="Migrations\201909040024469_AddTableCategorias.Designer.cs">
+      <DependentUpon>201909040024469_AddTableCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909040037240_AddRelProdutoCategoria.cs" />
+    <Compile Include="Migrations\201909040037240_AddRelProdutoCategoria.Designer.cs">
+      <DependentUpon>201909040037240_AddRelProdutoCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\Produto.cs" />
+    <Compile Include="Views\BuscarProdutoPorParteNome.cs" />
+    <Compile Include="Views\BuscarProdutoPorNome.cs" />
     <Compile Include="Views\CadastrarProduto.cs" />
     <Compile Include="Views\ListarProdutos.cs" />
     <Compile Include="Views\Program.cs" />
@@ -53,8 +77,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201909032231181_CriarBanco.resx">
+      <DependentUpon>201909032231181_CriarBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909040024469_AddTableCategorias.resx">
+      <DependentUpon>201909040024469_AddTableCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909040037240_AddRelProdutoCategoria.resx">
+      <DependentUpon>201909040037240_AddRelProdutoCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="EntityFramework.txt" />
   </ItemGroup>

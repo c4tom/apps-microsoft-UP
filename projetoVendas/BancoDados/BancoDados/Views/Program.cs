@@ -18,8 +18,10 @@ namespace BancoDados.Views
                 Console.WriteLine("  -- PROJETO DE BANCO DE DADOS --  \n");
                 Console.WriteLine("1 - Cadastrar produto");
                 Console.WriteLine("2 - Listar produtos");
-                Console.WriteLine("3 - Remover produto");
-                Console.WriteLine("4 - Editar produto");
+                Console.WriteLine("3 - Buscar produto por nome");
+                Console.WriteLine("4 - Buscar produtos por nome");
+                Console.WriteLine("5 - Remover produto");
+                Console.WriteLine("6 - Editar produto");
                 Console.WriteLine("0 - Sair");
                 Console.WriteLine("\nDigite a opção desejada:");
                 opcao = Convert.ToInt32(Console.ReadLine());
@@ -33,10 +35,10 @@ namespace BancoDados.Views
                         ListarProdutos.Renderizar();
                         break;
                     case 3:
-                        //CadastrarVendedor.Renderizar();
+                        BuscarProdutoPorNome.Renderizar();
                         break;
                     case 4:
-                        //ListarVendedores.Renderizar();
+                        BuscarProdutoPorParteNome.Renderizar();
                         break;
                     case 0:
                         Console.WriteLine("Saindo...");
