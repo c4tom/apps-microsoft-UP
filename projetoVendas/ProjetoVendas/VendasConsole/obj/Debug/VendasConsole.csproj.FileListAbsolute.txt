@@ -1,0 +1,7 @@
+C:\ProfessorDiogo\C#\ProjetoVendas\VendasConsole\bin\Debug\VendasConsole.exe.config
+C:\ProfessorDiogo\C#\ProjetoVendas\VendasConsole\bin\Debug\VendasConsole.exe
+C:\ProfessorDiogo\C#\ProjetoVendas\VendasConsole\bin\Debug\VendasConsole.pdb
+C:\ProfessorDiogo\C#\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.csproj.CoreCompileInputs.cache
+C:\ProfessorDiogo\C#\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.exe
+C:\ProfessorDiogo\C#\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.pdb
+C:\ProfessorDiogo\C#\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.csprojResolveAssemblyReference.cache
