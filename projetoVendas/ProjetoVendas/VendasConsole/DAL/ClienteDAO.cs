@@ -14,16 +14,26 @@ namespace VendasConsole.DAL
         private static List<Cliente> clientes = new List<Cliente>();
         public static bool CadastrarCliente(Cliente c)
         {
-            foreach (Cliente clienteCadastrado in clientes)
+            if (BuscarClientePorCpf(c) != null)
             {
-                if (clienteCadastrado.Cpf.Equals(c.Cpf))
-                {
-                    return false;
-                }
+                return false;
             }
             clientes.Add(c);
             return true;
         }
+
+        public static Cliente BuscarClientePorCpf(Cliente c)
+        {
+            foreach (Cliente clienteCadastrado in clientes)
+            {
+                if (clienteCadastrado.Cpf.Equals(c.Cpf))
+                {
+                    return clienteCadastrado;
+                }
+            }
+            return null;
+        }
+
         public static List<Cliente> ListarClientes()
         {
             return clientes;

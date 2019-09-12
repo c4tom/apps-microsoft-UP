@@ -42,10 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Dados.cs" />
+    <Compile Include="DAL\ProdutoDAO.cs" />
+    <Compile Include="DAL\VendaDAO.cs" />
+    <Compile Include="DAL\VendedorDAO.cs" />
     <Compile Include="DAL\ClienteDAO.cs" />
+    <Compile Include="Models\ItemVenda.cs" />
+    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\Venda.cs" />
+    <Compile Include="Models\Vendedor.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Utils\Validacao.cs" />
+    <Compile Include="Views\CadastrarVenda.cs" />
+    <Compile Include="Views\CadastrarProduto.cs" />
+    <Compile Include="Views\CadastrarVendedor.cs" />
     <Compile Include="Views\CadastrarCliente.cs" />
+    <Compile Include="Views\ListarProdutos.cs" />
+    <Compile Include="Views\ListarVendedores.cs" />
     <Compile Include="Views\ListarClientes.cs" />
     <Compile Include="Views\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
