@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VendasConsole.DAL;
 using VendasConsole.Models;
+using VendasConsole.Utils;
 
 namespace VendasConsole.Views
 {
@@ -19,14 +20,22 @@ namespace VendasConsole.Views
             c.Nome = Console.ReadLine();
             Console.WriteLine("Digite o CPF do cliente:");
             c.Cpf = Console.ReadLine();
-            if (ClienteDAO.CadastrarCliente(c))
+            if (Validacao.ValidarCpf(c.Cpf))
             {
-                Console.WriteLine("Cliente cadastrado com sucesso!");
+                if (ClienteDAO.CadastrarCliente(c))
+                {
+                    Console.WriteLine("Cliente cadastrado com sucesso!");
+                }
+                else
+                {
+                    Console.WriteLine("Cliente já cadastrado!");
+                }
             }
             else
             {
-                Console.WriteLine("Cliente já cadastrado!");
+                Console.WriteLine("CPF inválido!");
             }
+
         }
     }
 }

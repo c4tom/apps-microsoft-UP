@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="DAL\ClienteDAO.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Utils\Validacao.cs" />
     <Compile Include="Views\CadastrarCliente.cs" />
     <Compile Include="Views\ListarClientes.cs" />
     <Compile Include="Views\Program.cs" />
