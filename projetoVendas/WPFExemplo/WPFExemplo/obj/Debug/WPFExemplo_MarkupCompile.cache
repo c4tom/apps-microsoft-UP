@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\ProfessorDiogo\C#\WPFExemplo\WPFExemplo\obj\Debug\
+C:\ProfessorDiogo\WPFExemplo\WPFExemplo\obj\Debug\
 WPFExemplo
 none
 false
 DEBUG;TRACE
-C:\ProfessorDiogo\C#\WPFExemplo\WPFExemplo\App.xaml
-1595727124
+C:\ProfessorDiogo\WPFExemplo\WPFExemplo\App.xaml
+2-838665929
 
-5-619607157
+6-1901572989
 131569487696
-Views\frmCadastrarProduto.xaml;
+Views\frmPrincipal.xaml;Views\frmTeste.xaml;
 
 False
 
