@@ -82,6 +82,9 @@
     <Compile Include="Utilidades\Constantes.cs" />
     <Compile Include="Utilidades\FormatadorDataHora.cs" />
     <Compile Include="Utilidades\Singleton.cs" />
+    <Compile Include="Views\frmCadastroUsuario.xaml.cs">
+      <DependentUpon>frmCadastroUsuario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmJanelaPrincipal.xaml.cs">
       <DependentUpon>frmJanelaPrincipal.xaml</DependentUpon>
     </Compile>
@@ -117,6 +120,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\frmCadastroUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\frmJanelaPrincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
