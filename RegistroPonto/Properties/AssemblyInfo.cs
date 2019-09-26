@@ -7,11 +7,11 @@ using System.Windows;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associada a um assembly.
-[assembly: AssemblyTitle("Registro de Ponto")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("RegistroPonto")]
+[assembly: AssemblyDescription("Registro de Ponto")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Registro de Ponto")]
+[assembly: AssemblyProduct("RegistroPonto")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

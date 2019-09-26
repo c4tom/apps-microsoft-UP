@@ -1,17 +1,19 @@
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\bin\Debug\Registro de Ponto.exe.config
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\bin\Debug\Registro de Ponto.exe
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\bin\Debug\Registro de Ponto.pdb
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\obj\Debug\Registro de Ponto.csprojAssemblyReference.cache
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\obj\Debug\Views\frmJanelaPrincipal.g.cs
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\obj\Debug\App.g.cs
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\obj\Debug\Registro de Ponto_MarkupCompile.cache
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\obj\Debug\Registro de Ponto_MarkupCompile.lref
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\obj\Debug\Views\frmJanelaPrincipal.baml
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\obj\Debug\Registro de Ponto.g.resources
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\obj\Debug\Registro_de_Ponto.Properties.Resources.resources
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\obj\Debug\Registro de Ponto.csproj.GenerateResource.cache
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\obj\Debug\Registro de Ponto.csproj.CoreCompileInputs.cache
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\obj\Debug\Registro de Ponto.exe
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\obj\Debug\Registro de Ponto.pdb
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\obj\Debug\Views\frmRegistroPonto.g.cs
-K:\odrive\OneDrive\Documentos\UniversidadePositivo\ADS-2017-2019\5 Semestre (jul-dez 2019)\Desenvolvimento de Sistemas Microsoft\projetoPontoCSharpWPF\Registro de Ponto\obj\Debug\Views\frmRegistroPonto.baml
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\bin\Debug\RegistroPonto.exe.config
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\bin\Debug\RegistroPonto.exe
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\bin\Debug\RegistroPonto.pdb
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\bin\Debug\System.Data.SQLite.dll
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\bin\Debug\System.Data.SQLite.xml
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\obj\Debug\Registro de Ponto.csprojResolveAssemblyReference.cache
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\obj\Debug\Views\frmJanelaPrincipal.g.cs
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\obj\Debug\Views\frmRegistroPonto.g.cs
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\obj\Debug\App.g.cs
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\obj\Debug\RegistroPonto_MarkupCompile.cache
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\obj\Debug\RegistroPonto_MarkupCompile.lref
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\obj\Debug\Views\frmJanelaPrincipal.baml
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\obj\Debug\Views\frmRegistroPonto.baml
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\obj\Debug\RegistroPonto.g.resources
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\obj\Debug\RegistroPonto.Properties.Resources.resources
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\obj\Debug\Registro de Ponto.csproj.GenerateResource.Cache
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\obj\Debug\RegistroPonto.exe
+D:\Desenvolvimento\DotNet\Aplicativos\Candido\RegistroPonto\obj\Debug\RegistroPonto.pdb
