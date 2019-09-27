@@ -117,11 +117,20 @@
     <Compile Include="Views\frmCadastroUsuario.xaml.cs">
       <DependentUpon>frmCadastroUsuario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmCargo.xaml.cs">
+      <DependentUpon>frmCargo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmJanelaPrincipal.xaml.cs">
       <DependentUpon>frmJanelaPrincipal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\frmRegistroPonto.xaml.cs">
       <DependentUpon>frmRegistroPonto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmSobre.xaml.cs">
+      <DependentUpon>frmSobre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\testes\StringFormatDemo.xaml.cs">
+      <DependentUpon>StringFormatDemo.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -156,11 +165,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\frmCargo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\frmJanelaPrincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\frmRegistroPonto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\frmSobre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\testes\StringFormatDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

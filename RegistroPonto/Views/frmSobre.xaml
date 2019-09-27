@@ -1,0 +1,14 @@
+﻿<Window x:Class="RegistroPonto.Views.frmSobre"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroPonto.Views"
+        mc:Ignorable="d"
+        Title="Sobre o Registro de Ponto" Height="237" Width="457">
+    <Grid x:Name="gdPanel" Opacity="0.5">
+
+        <TextBlock x:Name="blockTXT" FontSize="50" Grid.ColumnSpan="2"><Run Text="AAA"/></TextBlock>
+
+    </Grid>
+</Window>

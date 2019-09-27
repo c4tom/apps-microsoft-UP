@@ -1,0 +1,32 @@
+﻿<Window x:Class="RegistroPonto.Views.StringFormatDemo" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:RegistroPonto.Views" mc:Ignorable="d" Title="StringFormatDemo" Height="206" Width="424">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Slider Grid.ColumnSpan="2" Name="MyValue" Minimum="0" Maximum="1000" Margin="10" />
+
+        <TextBlock Grid.Row="1">No Formatting</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding ElementName=MyValue,Path=Value}" />
+        <TextBlock Grid.Row="2">Currency</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding ElementName=MyValue,Path=Value,StringFormat='C'}" />
+        <TextBlock Grid.Row="5">Custom (no prefix)</TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding ElementName=MyValue,Path=Value,
+           StringFormat='{}{0:0.0}% reduction'}" />
+        <TextBlock Grid.Row="6">Brazil Culture</TextBlock>
+        <TextBlock Grid.Row="6" Grid.Column="1" Text="{Binding ElementName=MyValue,Path=Value,
+                          StringFormat='{}{0:C}',ConverterCulture=pt-BR}" />
+
+    </Grid>
+</Window>

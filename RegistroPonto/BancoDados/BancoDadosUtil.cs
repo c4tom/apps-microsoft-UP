@@ -140,8 +140,7 @@ namespace RegistroPonto.BancoDados
 
     private void Inicializar()
     {
-      string bancoDados =
-        Constantes.PASTA_APLICACAO + NOME_BANCO_DADOS;
+      string bancoDados = Constantes.PASTA_APLICACAO + NOME_BANCO_DADOS;
 
       if (!File.Exists(bancoDados))
       {
