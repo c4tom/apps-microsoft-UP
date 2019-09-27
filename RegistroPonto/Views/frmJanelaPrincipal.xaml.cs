@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Registro_de_Ponto.Views
+namespace RegistroPonto.Views
 {
     /// <summary>
     /// Lógica interna para frmJanelaPrincipal.xaml
@@ -27,6 +27,12 @@ namespace Registro_de_Ponto.Views
         private void BtnClickRegistrarPonto(object sender, RoutedEventArgs e)
         {
             frmRegistroPonto frm = new frmRegistroPonto();
+            frm.ShowDialog();
+        }
+
+        private void BtnClickCadastroUsuario(object sender, RoutedEventArgs e)
+        {
+            frmCadastroUsuario frm = new frmCadastroUsuario();
             frm.ShowDialog();
         }
     }

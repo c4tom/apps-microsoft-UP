@@ -24,6 +24,15 @@ namespace RegistroPonto.Views
             InitializeComponent();
         }
 
+        private void BtnCadastrarUsuario(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Registro realizado com sucesso!", "Info", MessageBoxButton.OK);
+        }
 
+        private void BtnClickNovoRegistro(object sender, RoutedEventArgs e)
+        {
+            // Limpar todos os campos
+
+        }
     }
 }
