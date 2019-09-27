@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using RegistroPonto.BancoDados;
+using RegistroPonto.Modelo.Entidades;
+
 
 namespace RegistroPonto.Views
 {
@@ -26,12 +29,26 @@ namespace RegistroPonto.Views
 
         private void BtnNovo(object sender, RoutedEventArgs e)
         {
-
+            txtCargo.Text = "";
+            txtSalario.Text = "";
         }
 
         private void BtnSalvar(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                Cargo cargo = new Cargo();
+                cargo.Nome = "adfafda";
+                cargo.Salario = 500.44f;
 
+                CargoBD cargobd = new CargoBD();
+                cargobd.Criar(cargo);
+
+                MessageBox.Show("ID" + cargo.Id.ToString());
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -8,12 +8,12 @@ namespace RegistroPonto.BancoDados
 {
   public class CargoBD : BaseBD<Cargo>
   {
-    public const string TABELA        = "CARGO";
-    public const string CAMPO_ID      = "ID";
-    public const string CAMPO_NOME    = "NOME";
-    public const string CAMPO_SALARIO = "SALARIO";
+    public const string TABELA        = "cargo";
+    public const string CAMPO_ID      = "id";
+    public const string CAMPO_NOME    = "nome";
+    public const string CAMPO_SALARIO = "salario";
 
-    private CargoBD()
+    public CargoBD()
     {
     }
 
@@ -68,21 +68,21 @@ namespace RegistroPonto.BancoDados
 
     private Cargo CriarObjetoCargo(IDataReader resultado)
     {
-      Cargo grupo = null;
+      Cargo cargo = null;
 
       try
       {
-        grupo = new Cargo();
-        grupo.Id = int.Parse(resultado[CAMPO_ID].ToString());
-        grupo.Nome = resultado[CAMPO_NOME].ToString();
-        grupo.Salario = Convert.ToSingle(resultado[CAMPO_SALARIO]);
+        cargo = new Cargo();
+        cargo.Id = int.Parse(resultado[CAMPO_ID].ToString());
+        cargo.Nome = resultado[CAMPO_NOME].ToString();
+        cargo.Salario = Convert.ToSingle(resultado[CAMPO_SALARIO]);
       }
       catch (Exception)
       {
         throw;
       }
 
-      return grupo;
+      return cargo;
     }
   }
 }
