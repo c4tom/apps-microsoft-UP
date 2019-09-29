@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="Janela Principal" Height="450" Width="800">
     <Grid>
-        
+        <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="782">
+
+            <MenuItem x:Name="mnArquivo" Header="_Arquivo" Height="22" Width="66">
+
+                <MenuItem Header="_Sair" HorizontalAlignment="Left" Height="22" Width="140" Click="MnClickSair"/>
+
+            </MenuItem>
+
+            <MenuItem x:Name="mnCadastro" Header="_Cadastros" Height="22" Width="83">
+
+                <MenuItem Header="_Cargos" HorizontalAlignment="Left" Height="22" Width="140" Click="MnClickCadastroCargos"/>
+
+                <MenuItem Header="_Usuarios" HorizontalAlignment="Left" Height="26" Width="140" Click="MnClickCadastroUsuario"/>
+
+            </MenuItem>
+
+            <MenuItem Header="_Sobre" Height="22" Width="100" Click="MnClickSobre"/>
+
+        </Menu>
+
+        <Button Content="Registrar Ponto" HorizontalAlignment="Left" Margin="648,1,0,0" VerticalAlignment="Top" Width="134" Click="MnClickRegistrarPonto"/>
     </Grid>
 </Window>
