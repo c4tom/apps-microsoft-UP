@@ -27,3 +27,9 @@
 - frmCargo
 - frmRegistroPonto
 - frmSobre
+
+6) Adicionar Formulários
+  frmCadastroUsuario
+- frmCargo
+- frmRegistroPonto
+- frmSobre

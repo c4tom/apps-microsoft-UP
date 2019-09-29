@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroPonto.Views"
         mc:Ignorable="d"
-        Title="frmRegistroPonto" Height="450" Width="800">
+        Title="Registrar Ponto" Height="433" Width="268">
     <Grid>
-        
+        <Button Content="Registrar Ponto" Click="BtnRegistrarPonto" HorizontalAlignment="Left" Margin="24,15,0,0" VerticalAlignment="Top" Width="206"/>
+        <DataGrid HorizontalAlignment="Left" Height="321" Margin="24,71,0,0" VerticalAlignment="Top" Width="206">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Data e Hora" FontWeight="Bold"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Últimos Registros" HorizontalAlignment="Left" Margin="24,40,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

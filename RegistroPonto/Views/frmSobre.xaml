@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroPonto.Views"
         mc:Ignorable="d"
-        Title="frmSobre" Height="450" Width="800">
-    <Grid>
-        
+        Title="Sobre o Registro de Ponto" Height="237" Width="457">
+    <Grid x:Name="gdPanel" Opacity="0.5">
+
+        <TextBlock x:Name="blockTXT" FontSize="50" Grid.ColumnSpan="2"><Run Text="AAA"/></TextBlock>
+
     </Grid>
 </Window>
