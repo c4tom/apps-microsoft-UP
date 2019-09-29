@@ -69,8 +69,20 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Context.cs" />
+    <Compile Include="Views\frmCadastroUsuario.xaml.cs">
+      <DependentUpon>frmCadastroUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmCargo.xaml.cs">
+      <DependentUpon>frmCargo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmJanelaPrincipal.xaml.cs">
       <DependentUpon>frmJanelaPrincipal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmRegistroPonto.xaml.cs">
+      <DependentUpon>frmRegistroPonto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmSobre.xaml.cs">
+      <DependentUpon>frmSobre.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -101,7 +113,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\frmCadastroUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\frmCargo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\frmJanelaPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\frmRegistroPonto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\frmSobre.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

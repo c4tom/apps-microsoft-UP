@@ -21,3 +21,9 @@
     - Empty First Code model
     - Editar Context.cs
       - trocar: base("name=Context") -> base("name=BdRegistroPontoWPF")
+
+5) Criar Janelas
+- frmCadastroUsuario
+- frmCargo
+- frmRegistroPonto
+- frmSobre
