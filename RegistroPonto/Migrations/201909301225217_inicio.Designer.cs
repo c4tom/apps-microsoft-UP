@@ -13,7 +13,7 @@ namespace RegistroPonto.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201909300324096_inicio"; }
+            get { return "201909301225217_inicio"; }
         }
         
         string IMigrationMetadata.Source

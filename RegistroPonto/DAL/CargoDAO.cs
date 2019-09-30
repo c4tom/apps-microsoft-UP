@@ -11,24 +11,31 @@ namespace RegistroPonto.DAL
     {
         private static Context ctx = new Context();
 
-        public static bool Cadastrar(Cargo u)
+        public static bool Cadastrar(Cargo c)
         {
+            //Verifica se existe um registro
+            if(BuscarPorNome(c) == null)
+            {
+                ctx.Cargos.Add(c);
+                ctx.SaveChanges();
+                return true;
+            }
             return false;
         }
 
-        public static Cargo BuscarPorNome(Cargo u)
+        public static Cargo BuscarPorNome(Cargo c)
         {
-            return null;
+            return ctx.Cargos.FirstOrDefault(x => x.Nome.Equals(c.Nome));
         }
 
         public static List<Cargo> Listar()
         {
-            return null;
+            return ctx.Cargos.ToList();
         }
 
-        public static Cargo BuscaPorId(Cargo u)
+        public static Cargo BuscaPorId(int id)
         {
-            return null;
+            return ctx.Cargos.Find(id);
         }
     }
 }

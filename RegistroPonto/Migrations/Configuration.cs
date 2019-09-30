@@ -9,7 +9,7 @@ namespace RegistroPonto.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(RegistroPonto.Models.Context context)
