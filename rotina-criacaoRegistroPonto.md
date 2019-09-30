@@ -38,3 +38,10 @@
 - UsuarioDAO
 - PontoDAO
 - CargoDAO
+
+8) Habilitar Migrações
+- Mudar em context.cs base("name=BdRegistroPontoWPF") para base("BdRegistroPontoWPF")
+- Abrir Menu > Exibir > Outras Janelas > Console Gerenciador de Pacotes:
+
+  - Executar: Enable-Migrations
+  - Executar: add-migration inicio
