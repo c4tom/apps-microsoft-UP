@@ -33,3 +33,8 @@
 - frmCargo
 - frmRegistroPonto
 - frmSobre
+
+7) Adicionar DAO
+- UsuarioDAO
+- PontoDAO
+- CargoDAO
