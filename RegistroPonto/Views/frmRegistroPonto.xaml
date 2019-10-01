@@ -4,18 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroPonto.Views"
-        mc:Ignorable="d"
+        mc:Ignorable="d" Loaded="WindowOnLoad"
         Title="Registrar Ponto" Height="465.344" Width="397.378">
     <Grid>
         <Button Content="Registrar Ponto" Click="BtnRegistrarPonto" HorizontalAlignment="Left" Margin="24,47,0,0" VerticalAlignment="Top" Width="206"/>
-        <DataGrid x:Name="dtaDataHora" HorizontalAlignment="Left" Height="321" Margin="24,103,0,0" VerticalAlignment="Top" Width="272">
+        <DataGrid x:Name="dtaDataHora" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="321" Margin="24,103,0,0" VerticalAlignment="Top" Width="298">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="150" Header="Data e Hora" FontWeight="Bold" Binding="{Binding DataRegistro}"/>
                 <DataGridTextColumn Width="100" Header="Tipo" FontWeight="Bold" Binding="{Binding Tipo}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Label Content="Últimos Registros" HorizontalAlignment="Left" Margin="24,72,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbEntradaSaida" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="206" SelectionChanged="CboxSelectionChange"/>
+        <ComboBox x:Name="cboEntradaSaida" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="206" SelectionChanged="CboxSelectionChange"/>
 
     </Grid>
 </Window>

@@ -74,11 +74,13 @@
     <Compile Include="DAL\TipoEntradaSaidaDAO.cs" />
     <Compile Include="DAL\UsuarioDAO.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\PopulateInicio.cs" />
     <Compile Include="Models\Cargo.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\Ponto.cs" />
     <Compile Include="Models\TipoEntradaSaida.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Utils\Uteis.cs" />
     <Compile Include="Views\frmCadastroUsuario.xaml.cs">
       <DependentUpon>frmCadastroUsuario.xaml</DependentUpon>
     </Compile>

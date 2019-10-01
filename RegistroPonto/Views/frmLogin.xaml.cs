@@ -1,6 +1,7 @@
 ﻿using RegistroPonto.DAL;
 using RegistroPonto.Models;
 using System.Windows;
+using RegistroPonto.Utils;
 namespace RegistroPonto.Views
 {
     /// <summary>
@@ -8,7 +9,6 @@ namespace RegistroPonto.Views
     /// </summary>
     public partial class frmLogin : Window
     {
-        private Usuario usuario { get; set; } = new Usuario();
         public frmLogin()
         {
             InitializeComponent();
@@ -18,12 +18,19 @@ namespace RegistroPonto.Views
         {
             if (txtRegistro != null)
             {
-                Usuario u =  UsuarioDAO.BuscaPorRegistro(txtRegistro.Text);
+                Usuario u = UsuarioDAO.BuscaPorRegistro(txtRegistro.Text);
+                if (u == null)
+                {
+                    MessageBox.Show("Registro e/ou senha inválido.!!!");
+                    return;
+                }
 
+                // Salva na "sessao"
+                Uteis.UsuarioLogado = u;
 
                 frmJanelaPrincipal main = new frmJanelaPrincipal();
                 main.Show();
-                //main.Title = main.Title + " - " + u.Nome;
+                main.Title = main.Title + " - " + u.Nome;
                 this.Close();
             }
 

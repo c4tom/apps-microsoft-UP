@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Login" Height="228.795" Width="511.567">
     <Grid>
-        <TextBox x:Name="txtRegistro" MaxLength="5" HorizontalAlignment="Left" Height="23" Margin="166,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtRegistro" MaxLength="5" HorizontalAlignment="Left" Height="23" Margin="166,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="00001"/>
         <Label Content="Registro:" HorizontalAlignment="Left" Margin="109,42,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="165,144,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickLogin"/>
         <TextBox x:Name="txtSenha" HorizontalAlignment="Left" Height="23" Margin="166,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

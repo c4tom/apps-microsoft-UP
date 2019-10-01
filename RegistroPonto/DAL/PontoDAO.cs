@@ -22,9 +22,11 @@ namespace RegistroPonto.DAL
             return ctx.Pontos.Where(p => DbFunctions.TruncateTime(p.DataRegistro) == DbFunctions.TruncateTime(dt)).ToList();
         }
 
-        public static List<Ponto> Listar()
+
+
+        public static List<Ponto> Listar(Usuario u)
         {
-            return ctx.Pontos.ToList();
+            return ctx.Pontos.Where(x => x.Usuario.UsuarioId == u.UsuarioId).OrderBy(x => x.DataRegistro).ToList();
         }
     }
 }
