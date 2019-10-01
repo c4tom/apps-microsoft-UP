@@ -11,8 +11,8 @@ namespace RegistroPonto.Models
         public int PontoId { get; set; }
         [Column(TypeName = "smalldatetime")]
         public DateTime DataRegistro { get; set; }
-        public TipoEntradaSaida Tipo { get; set; }
-        public Usuario Usuario { get; set; }
+        public TipoEntradaSaida Tipo { get; set; } = new TipoEntradaSaida();
+        public Usuario Usuario { get; set; } = new Usuario();
 
         public Ponto()
         {

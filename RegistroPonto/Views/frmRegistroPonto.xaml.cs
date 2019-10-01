@@ -1,10 +1,10 @@
 ﻿using RegistroPonto.DAL;
 using RegistroPonto.Models;
+using RegistroPonto.Utils;
 using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using RegistroPonto.Utils;
-using System.Collections.Generic;
 
 namespace RegistroPonto.Views
 {
@@ -24,7 +24,7 @@ namespace RegistroPonto.Views
             cboEntradaSaida.DisplayMemberPath = "Tipo";
             cboEntradaSaida.SelectedValuePath = "TipoId";
 
-            Title = Title + " - "+ Uteis.UsuarioLogado.Nome;
+            Title = Title + " - " + Uteis.UsuarioLogado.Nome;
             MostrarDataGrid();
         }
         public void CboxSelectionChange(object sender, SelectionChangedEventArgs e)
@@ -46,10 +46,7 @@ namespace RegistroPonto.Views
             {
                 Usuario = Uteis.UsuarioLogado,
                 DataRegistro = DateTime.Now,
-                Tipo = new TipoEntradaSaida
-                {
-                    TipoId = cboEntradaSaida.SelectedIndex
-                }
+                Tipo = TipoEntradaSaidaDAO.BuscaPorId(TipoEntrada)
             };
 
             if (PontoDAO.Cadastrar(Ponto))
@@ -67,7 +64,7 @@ namespace RegistroPonto.Views
         {
             List<dynamic> RegistrosPontos = new List<dynamic>();
             List<Ponto> Pontos = PontoDAO.Listar(Uteis.UsuarioLogado);
-            foreach(Ponto rp in Pontos)
+            foreach (Ponto rp in Pontos)
             {
                 dynamic d = new
                 {
@@ -76,7 +73,7 @@ namespace RegistroPonto.Views
                 };
                 RegistrosPontos.Add(d);
             }
-            dtaDataHora.ItemsSource = RegistrosPontos ;
+            dtaDataHora.ItemsSource = RegistrosPontos;
             dtaDataHora.Items.Refresh();
         }
     }

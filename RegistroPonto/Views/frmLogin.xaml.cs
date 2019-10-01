@@ -1,7 +1,7 @@
 ﻿using RegistroPonto.DAL;
 using RegistroPonto.Models;
-using System.Windows;
 using RegistroPonto.Utils;
+using System.Windows;
 namespace RegistroPonto.Views
 {
     /// <summary>

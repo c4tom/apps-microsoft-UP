@@ -14,6 +14,10 @@ namespace RegistroPonto.DAL
             return true;
         }
 
+        public static TipoEntradaSaida BuscaPorId(int id)
+        {
+            return ctx.EntradaSaidas.Find(id);
+        }
         public static List<TipoEntradaSaida> Listar()
         {
             return ctx.EntradaSaidas.ToList();

@@ -47,7 +47,7 @@
   - Executar: Enable-Migrations -EnableAutomaticMigrations -Force
   - Executar: add-migration inicio
   - Executar: update-database -Verbose
-  - Executar(resetar o banco de dados - os dados): update-database -TargetMigration:0 
+  - Executar(resetar o banco de dados - os dados): update-database -TargetMigration:0 -Force -Verbose
 
 9) Atualizar BD
 - update-database -TargetMigration:0 -Force -Verbose

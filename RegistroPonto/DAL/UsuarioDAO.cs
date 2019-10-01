@@ -26,17 +26,17 @@ namespace RegistroPonto.DAL
 
         public static Usuario BuscaPorRegistro(string registro)
         {
-            return ctx.Usuarios.FirstOrDefault(x => x.Registro.Equals(registro));
+            return ctx.Usuarios.Include("Cargo").FirstOrDefault(x => x.Registro.Equals(registro));
         }
 
         public static List<Usuario> Listar()
         {
-            return ctx.Usuarios.ToList();
+            return ctx.Usuarios.Include("Cargo").ToList();
         }
 
         public static Usuario BuscaPorId(int id)
         {
-            return ctx.Usuarios.Find(id);
+            return ctx.Usuarios.Include("Cargo").Where(x => x.UsuarioId == id).FirstOrDefault();
         }
     }
 }

@@ -71,8 +71,13 @@
     </Compile>
     <Compile Include="DAL\CargoDAO.cs" />
     <Compile Include="DAL\PontoDAO.cs" />
+    <Compile Include="DAL\SingletonContext.cs" />
     <Compile Include="DAL\TipoEntradaSaidaDAO.cs" />
     <Compile Include="DAL\UsuarioDAO.cs" />
+    <Compile Include="Migrations\201910012246200_inicio.cs" />
+    <Compile Include="Migrations\201910012246200_inicio.Designer.cs">
+      <DependentUpon>201910012246200_inicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\PopulateInicio.cs" />
     <Compile Include="Models\Cargo.cs" />
@@ -114,6 +119,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201910012246200_inicio.resx">
+      <DependentUpon>201910012246200_inicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
