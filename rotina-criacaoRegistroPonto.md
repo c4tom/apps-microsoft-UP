@@ -73,7 +73,27 @@
 	- Views > SQL Server Object Browser (Gerenciador do banco de dados local)
 
 
-## Referencias
+## Debug SQL
+- Adicionar no arquivo App.config
+```xml
+<entityFramework>
+  ...
+
+    <interceptors> 
+      <interceptor type="System.Data.Entity.Infrastructure.Interception.DatabaseLogger, EntityFramework"> 
+        <parameters> 
+          <parameter value="c:\temp\ef_log.txt"/> 
+          <parameter value="true" type="System.Boolean"/> 
+        </parameters> 
+      </interceptor> 
+    </interceptors>
+
+    ...
+</entityFramework>
+```
+- https://visualstudiomagazine.com/articles/2017/01/02/entity-framework-query-visual-studio.aspx
+
+## Referências
 - Install EF6 https://docs.microsoft.com/pt-br/ef/ef6/
   - Code First https://docs.microsoft.com/pt-br/ef/ef6/modeling/code-first/workflows/new-database?redirectedfrom=MSDN
 - https://coding.abel.nu/2012/03/ef-migrations-command-reference/
