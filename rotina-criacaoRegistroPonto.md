@@ -49,7 +49,9 @@
   - Executar: update-database -Verbose
   - Executar(resetar o banco de dados - os dados): update-database -TargetMigration:0 
 
-
+9) Atualizar BD
+- update-database -TargetMigration:0 -Force -Verbose
+- update-database -Verbose
 
 
 
@@ -79,7 +81,8 @@
 - https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/learn/lecture/11527674#overview
 - https://www.devmedia.com.br/csharp-entity-framework-entendendo-o-funcionamento-do-model-first/29661
 - SQL Collumn Types -  https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/sqlclient-for-ef-types
-
+- Linq - https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq
+- Link - Select Query https://www.learnentityframeworkcore.com/dbset/querying-data
 
 - Extra
   - https://docs.microsoft.com/pt-br/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application
