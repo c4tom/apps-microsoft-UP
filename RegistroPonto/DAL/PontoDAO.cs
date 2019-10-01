@@ -8,7 +8,7 @@ namespace RegistroPonto.DAL
 {
     class PontoDAO
     {
-        private static Context ctx = new Context();
+        private static Context ctx = SingletonContext.GetInstance();
 
         public static bool Cadastrar(Ponto p)
         {
@@ -23,10 +23,13 @@ namespace RegistroPonto.DAL
         }
 
 
-
+        // Listar por usuário 
         public static List<Ponto> Listar(Usuario u)
         {
-            return ctx.Pontos.Where(x => x.Usuario.UsuarioId == u.UsuarioId).OrderBy(x => x.DataRegistro).ToList();
+            return ctx.Pontos
+                .Include("Tipo")
+                .Include("Usuario")
+                .Where(x => x.Usuario.UsuarioId == u.UsuarioId).OrderBy(x => x.DataRegistro).ToList();
         }
     }
 }

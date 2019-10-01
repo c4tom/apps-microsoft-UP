@@ -6,7 +6,7 @@ namespace RegistroPonto.DAL
 {
     class CargoDAO
     {
-        private static Context ctx = new Context();
+        private static Context ctx = SingletonContext.GetInstance();
 
         public static bool Cadastrar(Cargo c)
         {

@@ -1,13 +1,13 @@
 namespace RegistroPonto.Migrations
 {
-    using RegistroPonto.Models;
-    using System;
     using System.Data.Entity.Migrations;
+    using System.Linq;
+
     internal sealed class Configuration : DbMigrationsConfiguration<RegistroPonto.Models.Context>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(RegistroPonto.Models.Context context)
@@ -16,8 +16,10 @@ namespace RegistroPonto.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
-
-            PopulateInicio.Popular(context);
+            if (!context.Usuarios.Any())
+            {
+                PopulateInicio.Popular(context);
+            }
         }
     }
 }
