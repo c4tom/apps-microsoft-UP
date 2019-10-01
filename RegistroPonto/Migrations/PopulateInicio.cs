@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RegistroPonto.Models;
+﻿using RegistroPonto.Models;
+using System;
 
 namespace RegistroPonto.Migrations
 {
@@ -27,7 +23,7 @@ namespace RegistroPonto.Migrations
             context.Cargos.Add(c3);
 
             Usuario u1 = new Usuario(1, "Euzinho Adm", "00001", DateTime.Now, c3);
-            Usuario u2 = new Usuario(1, "Ana Paula Silva", "00002", DateTime.Now, c1);
+            Usuario u2 = new Usuario(2, "Ana Paula Silva", "00002", DateTime.Now, c1);
 
             context.Usuarios.Add(u1);
             context.Usuarios.Add(u2);
