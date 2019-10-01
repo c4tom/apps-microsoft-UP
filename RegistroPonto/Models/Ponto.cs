@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RegistroPonto.Models
 {
@@ -13,8 +9,22 @@ namespace RegistroPonto.Models
     {
         [Key]
         public int PontoId { get; set; }
+        [Column(TypeName = "smalldatetime")]
         public DateTime DataRegistro { get; set; }
-        public string Tipo { get; set; }
+        public TipoEntradaSaida Tipo { get; set; }
+        public Usuario Usuario { get; set; }
+
+        public Ponto()
+        {
+
+        }
+        public Ponto(int pontoId, DateTime dataRegistro, TipoEntradaSaida tipo, Usuario usuario)
+        {
+            PontoId = pontoId;
+            DataRegistro = dataRegistro;
+            Tipo = tipo;
+            Usuario = usuario;
+        }
     }
 
 }

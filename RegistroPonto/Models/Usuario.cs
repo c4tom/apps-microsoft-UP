@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RegistroPonto.Models
 {
@@ -16,6 +12,23 @@ namespace RegistroPonto.Models
         public string Nome { get; set; }
         public string Registro { get; set; }
         public DateTime DataNascimento { get; set; }
+        public Cargo Cargo { get; set; }
+
+        public Usuario()
+        {
+
+        }
+
+        public Usuario(int usuarioId, string nome, string registro, DateTime dataNascimento, Cargo cargo)
+        {
+            UsuarioId = usuarioId;
+            Nome = nome;
+            Registro = registro;
+            DataNascimento = dataNascimento;
+            Cargo = cargo;
+        }
     }
+
+
 
 }

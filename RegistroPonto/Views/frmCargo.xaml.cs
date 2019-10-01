@@ -30,12 +30,12 @@ namespace RegistroPonto.Views
 
         private void BtnSalvar(object sender, RoutedEventArgs e)
         {
-            
+
             Cargo c = new Cargo
             {
                 Nome = txtCargo.Text,
                 Salario = Convert.ToDouble(txtSalario.Text)
-                
+
             };
 
             if (CargoDAO.Cadastrar(c))

@@ -5,15 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroPonto.Views"
         mc:Ignorable="d"
-        Title="Registrar Ponto" Height="433" Width="268">
+        Title="Registrar Ponto" Height="465.344" Width="397.378">
     <Grid>
-        <Button Content="Registrar Ponto" Click="BtnRegistrarPonto" HorizontalAlignment="Left" Margin="24,15,0,0" VerticalAlignment="Top" Width="206"/>
-        <DataGrid HorizontalAlignment="Left" Height="321" Margin="24,71,0,0" VerticalAlignment="Top" Width="206">
+        <Button Content="Registrar Ponto" Click="BtnRegistrarPonto" HorizontalAlignment="Left" Margin="24,47,0,0" VerticalAlignment="Top" Width="206"/>
+        <DataGrid x:Name="dtaDataHora" HorizontalAlignment="Left" Height="321" Margin="24,103,0,0" VerticalAlignment="Top" Width="272">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Data e Hora" FontWeight="Bold"/>
+                <DataGridTextColumn Width="150" Header="Data e Hora" FontWeight="Bold" Binding="{Binding DataRegistro}"/>
+                <DataGridTextColumn Width="100" Header="Tipo" FontWeight="Bold" Binding="{Binding Tipo}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label Content="Últimos Registros" HorizontalAlignment="Left" Margin="24,40,0,0" VerticalAlignment="Top"/>
+        <Label Content="Últimos Registros" HorizontalAlignment="Left" Margin="24,72,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbEntradaSaida" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="206" SelectionChanged="CboxSelectionChange"/>
 
     </Grid>
 </Window>

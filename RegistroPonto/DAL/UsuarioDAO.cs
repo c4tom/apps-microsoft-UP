@@ -1,9 +1,6 @@
 ﻿using RegistroPonto.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RegistroPonto.DAL
 {
@@ -13,22 +10,33 @@ namespace RegistroPonto.DAL
 
         public static bool Cadastrar(Usuario u)
         {
+            if (BuscarPorNome(u) == null)
+            {
+                ctx.Usuarios.Add(u);
+                ctx.SaveChanges();
+                return true;
+            }
             return false;
         }
 
         public static Usuario BuscarPorNome(Usuario u)
         {
-            return null;
+            return ctx.Usuarios.FirstOrDefault(x => x.Nome.Equals(u.Nome));
         }
 
-        public static List<Usuario> Listar ()
+        public static Usuario BuscaPorRegistro(string registro)
         {
-            return null;
+            return ctx.Usuarios.FirstOrDefault(x => x.Registro.Equals(registro));
         }
 
-        public static Usuario BuscaPorId(Usuario u)
+        public static List<Usuario> Listar()
         {
-            return null;
+            return ctx.Usuarios.ToList();
+        }
+
+        public static Usuario BuscaPorId(int id)
+        {
+            return ctx.Usuarios.Find(id);
         }
     }
 }

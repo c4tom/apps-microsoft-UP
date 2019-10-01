@@ -28,5 +28,8 @@
         </Menu>
 
         <Button Content="Registrar Ponto" HorizontalAlignment="Left" Margin="648,1,0,0" VerticalAlignment="Top" Width="134" Click="MnClickRegistrarPonto"/>
+        <StatusBar Name="sbarMain" HorizontalAlignment="Left" Height="26" Margin="0,393,0,0" VerticalAlignment="Top" Width="792">
+            <TextBlock x:Name="sbarText1">Login: </TextBlock>
+        </StatusBar>
     </Grid>
 </Window>

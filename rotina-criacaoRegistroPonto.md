@@ -39,12 +39,15 @@
 - PontoDAO
 - CargoDAO
 
-8) Habilitar Migrações
+8) CRUDs (ponto, usuarios, cargo)
+- Habilitar Migrações
 - Mudar em context.cs base("name=BdRegistroPontoWPF") para base("BdRegistroPontoWPF")
 - Abrir Menu > Exibir > Outras Janelas > Console Gerenciador de Pacotes:
-  - Executar: Enable-Migrations
+- Adicionado Tabela TipoEntradaSaida - Populado ao executar: add-migration (ver Configuration.cs)
+  - Executar: Enable-Migrations -EnableAutomaticMigrations -Force
   - Executar: add-migration inicio
   - Executar: update-database -Verbose
+  - Executar(resetar o banco de dados - os dados): update-database -TargetMigration:0 
 
 
 
@@ -75,5 +78,8 @@
 - https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx
 - https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/learn/lecture/11527674#overview
 - https://www.devmedia.com.br/csharp-entity-framework-entendendo-o-funcionamento-do-model-first/29661
+- SQL Collumn Types -  https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/sqlclient-for-ef-types
+
+
 - Extra
   - https://docs.microsoft.com/pt-br/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application

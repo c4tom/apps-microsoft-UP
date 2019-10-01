@@ -2,6 +2,7 @@ using System.Data.Entity;
 
 namespace RegistroPonto.Models
 {
+    // https://www.entityframeworktutorial.net/efcore/entity-framework-core-dbcontext.aspx
     class Context : DbContext
     {
         // Your context has been configured to use a 'Context' connection string from your application's 
@@ -13,7 +14,10 @@ namespace RegistroPonto.Models
         public Context() : base("BdRegistroPontoWPF") { }
 
         public DbSet<Cargo> Cargos { get; set; }
-        
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Ponto> Pontos { get; set; }
+        public DbSet<TipoEntradaSaida> EntradaSaidas { get; set; }
+
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.

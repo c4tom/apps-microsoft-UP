@@ -1,9 +1,8 @@
 ﻿using RegistroPonto.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RegistroPonto.DAL
 {
@@ -11,24 +10,21 @@ namespace RegistroPonto.DAL
     {
         private static Context ctx = new Context();
 
-        public static bool Cadastrar(Ponto u)
+        public static bool Cadastrar(Ponto p)
         {
-            return false;
+            ctx.Pontos.Add(p);
+            ctx.SaveChanges();
+            return true;
         }
 
-        public static Ponto BuscarPorNome(Ponto u)
+        public static List<Ponto> BuscarPorData(DateTime dt)
         {
-            return null;
+            return ctx.Pontos.Where(p => DbFunctions.TruncateTime(p.DataRegistro) == DbFunctions.TruncateTime(dt)).ToList();
         }
 
         public static List<Ponto> Listar()
         {
-            return null;
-        }
-
-        public static Usuario BuscaPorId(Ponto u)
-        {
-            return null;
+            return ctx.Pontos.ToList();
         }
     }
 }
