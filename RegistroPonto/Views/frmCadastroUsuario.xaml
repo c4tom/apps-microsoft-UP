@@ -19,7 +19,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nome" Width="300" Binding="{Binding Nome}"/>
                 <DataGridTextColumn Header="Registro" Width="80" Binding="{Binding Registro}"/>
-                <DataGridTextColumn Header="Data Nascimento" Binding="{Binding DataNascimento}"/>
+                <DataGridTextColumn Header="Data Nascimento" Binding="{Binding DataNascimento, StringFormat={}{0:dd/MM/yyyy}}"/>
             </DataGrid.Columns>
         </DataGrid>
         <ComboBox x:Name="cboCargo" HorizontalAlignment="Left" Margin="159,144,0,0" VerticalAlignment="Top" Width="220" />
