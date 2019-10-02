@@ -1,5 +1,3 @@
-using System.Data.Entity;
-
 namespace RegistroPonto.Models
 {
     // https://www.entityframeworktutorial.net/efcore/entity-framework-core-dbcontext.aspx
