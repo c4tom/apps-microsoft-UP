@@ -13,6 +13,7 @@ namespace RegistroPonto.Views
     /// </summary>
     public partial class frmRegistroPonto : Window
     {
+        static DateTime? dIn, dOut = null;
         public frmRegistroPonto()
         {
             InitializeComponent();
@@ -36,17 +37,37 @@ namespace RegistroPonto.Views
             // Adiciona registro ao banco de dados e mostra o valor no grid
 
             int TipoEntrada = Convert.ToInt32(cboEntradaSaida.SelectedValue);
-            if (TipoEntrada == null)
+            if (TipoEntrada == 0)
             {
                 MessageBox.Show("Favor, selecionar o tipo");
                 return;
             }
 
+            Ponto UltimoRegistro = PontoDAO.BuscaUltimoRegistro(Uteis.UsuarioLogado);
+
+            if(UltimoRegistro == null && UltimoRegistro.DataRegistroSaida == null)
+            {
+                // Deve registrar a entrada, pois o ultimo registro, mesmo não tendo nenhum
+                if(TipoEntrada == 2)
+                {
+                    MessageBox.Show("Favor, você deve registrar a entrada");
+                }
+            }
+
+            if (TipoEntrada == 1)
+            {
+                dIn = DateTime.Now;
+            }
+            else
+            {
+                dOut = DateTime.Now;
+            }
+            
             Ponto Ponto = new Ponto
             {
                 Usuario = Uteis.UsuarioLogado,
-                DataRegistro = DateTime.Now,
-                Tipo = TipoEntradaSaidaDAO.BuscaPorId(TipoEntrada)
+                DataRegistroEntrada = dIn,
+                DataRegistroSaida = dOut
             };
 
             if (PontoDAO.Cadastrar(Ponto))
@@ -64,17 +85,26 @@ namespace RegistroPonto.Views
         {
             List<dynamic> RegistrosPontos = new List<dynamic>();
             List<Ponto> Pontos = PontoDAO.Listar(Uteis.UsuarioLogado);
-            foreach (Ponto rp in Pontos)
-            {
-                dynamic d = new
-                {
-                    DataRegistro = rp.DataRegistro.ToString("dd/MM/yyyy HH:mm:ss"),
-                    Tipo = rp.Tipo.Tipo
-                };
-                RegistrosPontos.Add(d);
-            }
-            dtaDataHora.ItemsSource = RegistrosPontos;
+            //foreach (Ponto rp in Pontos)
+            //{
+            //    dynamic d = new
+            //    {
+            //        PontoId = rp.PontoId,
+            //        DataRegistroEntrada = rp.DataRegistroEntrada?.ToString("dd/MM/yyyy HH:mm:ss"),
+            //        DataRegistroSaida = rp.DataRegistroSaida?.ToString("dd/MM/yyyy HH:mm:ss"),
+            //        Usuario = rp.Usuario
+            //    };
+            //    RegistrosPontos.Add(d);
+            //}
+            dtaDataHora.ItemsSource = Pontos;
             dtaDataHora.Items.Refresh();
+        }
+
+        private void DTAChange(object sender, SelectionChangedEventArgs e)
+        {
+            dynamic p = dtaDataHora.SelectedItem;
+            PontoDAO.Remove(p);
+            MostrarDataGrid();
         }
     }
 }

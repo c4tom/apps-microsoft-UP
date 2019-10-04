@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroPonto.Views"
         mc:Ignorable="d" Loaded="WindowOnLoad"
-        Title="Registrar Ponto" Height="465.344" Width="397.378">
+        Title="Registrar Ponto" Height="465.344" Width="450">
     <Grid>
-        <Button Content="Registrar Ponto" Click="BtnRegistrarPonto" HorizontalAlignment="Left" Margin="24,47,0,0" VerticalAlignment="Top" Width="206"/>
-        <DataGrid x:Name="dtaDataHora" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="321" Margin="24,103,0,0" VerticalAlignment="Top" Width="298">
+        <Button x:Name="btnRegistrar" Content="Registrar Ponto" Click="BtnRegistrarPonto" HorizontalAlignment="Left" Margin="262,10,0,0" VerticalAlignment="Top" Width="170"/>
+        <DataGrid x:Name="dtaDataHora" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="343" Margin="24,81,0,0" VerticalAlignment="Top" Width="408">
             <DataGrid.Columns>
-                <DataGridTextColumn Width="150" Header="Data e Hora" FontWeight="Bold" Binding="{Binding DataRegistro}"/>
-                <DataGridTextColumn Width="100" Header="Tipo" FontWeight="Bold" Binding="{Binding Tipo}"/>
+                <DataGridTextColumn Width="200" Header="Entrada" FontWeight="Bold" Binding="{Binding DataRegistroEntrada , StringFormat=\{0:dd/MM/yyyy HH:mm:ss\}}"/>
+                <DataGridTextColumn Width="200" Header="Saida" FontWeight="Bold" Binding="{Binding DataRegistroSaida , StringFormat=\{0:dd/MM/yyyy HH:mm:ss\}}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label Content="Últimos Registros" HorizontalAlignment="Left" Margin="24,72,0,0" VerticalAlignment="Top"/>
+        <Label Content="Últimos Registros" HorizontalAlignment="Left" Margin="24,50,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cboEntradaSaida" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="206" SelectionChanged="CboxSelectionChange"/>
 
     </Grid>

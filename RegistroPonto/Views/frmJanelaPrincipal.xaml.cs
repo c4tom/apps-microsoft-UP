@@ -44,5 +44,6 @@ namespace RegistroPonto.Views
         {
             new frmRegistroPonto().ShowDialog();
         }
+
     }
 }

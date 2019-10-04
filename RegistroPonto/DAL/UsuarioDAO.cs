@@ -38,5 +38,17 @@ namespace RegistroPonto.DAL
         {
             return ctx.Usuarios.Include("Cargo").Where(x => x.UsuarioId == id).FirstOrDefault();
         }
+
+
+        public static bool Atualizar(Usuario u)
+        {
+            ctx.Entry(u).State = System.Data.Entity.EntityState.Modified;
+            var retorno = ctx.SaveChanges();
+            if (retorno > 0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

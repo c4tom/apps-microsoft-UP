@@ -10,6 +10,7 @@ namespace RegistroPonto.Models
         [Key]
         public int UsuarioId { get; set; }
         public string Nome { get; set; }
+        public string Sobrenome { get; set; }
         public string Registro { get; set; }
         public DateTime DataNascimento { get; set; }
         public Cargo Cargo { get; set; }
@@ -19,10 +20,11 @@ namespace RegistroPonto.Models
 
         }
 
-        public Usuario(int usuarioId, string nome, string registro, DateTime dataNascimento, Cargo cargo)
+        public Usuario(int usuarioId, string nome, string sobrenome, string registro, DateTime dataNascimento, Cargo cargo)
         {
             UsuarioId = usuarioId;
             Nome = nome;
+            Sobrenome = sobrenome;
             Registro = registro;
             DataNascimento = dataNascimento;
             Cargo = cargo;

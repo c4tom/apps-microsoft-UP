@@ -103,6 +103,7 @@
 - SQL Collumn Types -  https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/sqlclient-for-ef-types
 - Linq - https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq
 - Link - Select Query https://www.learnentityframeworkcore.com/dbset/querying-data
+- Datas Null - https://stackoverflow.com/questions/1833054/how-can-i-format-a-nullable-datetime-with-tostring
 
 - Extra
   - https://docs.microsoft.com/pt-br/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application

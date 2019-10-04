@@ -19,17 +19,39 @@ namespace RegistroPonto.DAL
 
         public static List<Ponto> BuscarPorData(DateTime dt)
         {
-            return ctx.Pontos.Where(p => DbFunctions.TruncateTime(p.DataRegistro) == DbFunctions.TruncateTime(dt)).ToList();
+            return ctx.Pontos.Where(p => DbFunctions.TruncateTime(p.DataRegistroEntrada) == DbFunctions.TruncateTime(dt)).ToList();
         }
 
+        public static Ponto BuscaUltimoRegistro(Usuario u)
+        {
+            return ctx.Pontos.Where(x => x.Usuario.UsuarioId == u.UsuarioId).Take(1).FirstOrDefault();
+        }
 
+        public static void Remove(Ponto p)
+        {
+            ctx.Pontos.Remove(p);
+            ctx.SaveChanges();
+        }
+
+        public static void Alterar(Ponto p)
+        {
+            ctx.Entry(p).State = EntityState.Modified;
+            ctx.SaveChanges();
+        }
         // Listar por usuário 
         public static List<Ponto> Listar(Usuario u)
         {
             return ctx.Pontos
-                .Include("Tipo")
                 .Include("Usuario")
-                .Where(x => x.Usuario.UsuarioId == u.UsuarioId).OrderBy(x => x.DataRegistro).ToList();
+                .Where(x => x.Usuario.UsuarioId == u.UsuarioId).OrderByDescending(x => x.DataRegistroEntrada).ToList();
+        }
+
+
+        public static List<Ponto> ListarSomatorioPorUsuarioEDia(Usuario u)
+        {
+            return ctx.Pontos
+                .Include("Usuario")
+                .Where(x => x.Usuario.UsuarioId == u.UsuarioId).OrderByDescending(x => x.DataRegistroEntrada).ToList();
         }
     }
 }
